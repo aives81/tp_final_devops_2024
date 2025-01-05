@@ -1,6 +1,12 @@
 name: Continuous Deployment Pipeline
 
 on:
+  push:
+    branches:
+      - main
+    pull_request:
+      branches:
+        - main
   workflow_run:
     workflows: [ "Continuous Integration Pipeline" ]
     types:
